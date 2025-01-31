@@ -1,22 +1,70 @@
 ---
 import astroLogo from "../assets/astro.svg";
+import GithubCat from "../assets/github-cat.svg?raw";
+import mostafa from "../assets/team/mostafa.jpeg";
 ---
 
-<article>
+<div class="team">
   <h2>The Typescript Team</h2>
-</article>
+  <article>
+    <h3>Mostafa Razavi</h3>
+    <div class="bio">
+      <img src={mostafa.src} alt="Mostafa" />
+      <p>
+        The TypeScript team is a group of people who are passionate about
+        TypeScript and the community around it. We are dedicated to making
+        TypeScript the best language it can be, and we are always looking for
+        ways to improve it.
+      </p>
+    </div>
+    <div class="social">
+      <a href="https://github.com/splendidcomputer" target="_blank">
+        <Fragment set:html={GithubCat} />
+      </a>
+    </div>
+  </article>
+</div>
 
 <style>
-  article {
+  div.team {
     display: grid;
     place-items: center;
     max-width: "1024px";
     margin: "0 auto";
     padding-top: var(--size-8);
+
+    color: var(--gray-4);
   }
   h2 {
     font-size: 2rem;
-    color: var(--gray-1);
     letter-spacing: var(--font-letterspacing-4);
+  }
+
+  article {
+    padding: var(--size-4);
+  }
+
+  article h3 {
+    font-size: var(--size-6);
+    margin-bottom: var(--size-2);
+    border-bottom: var(--gray-4) var(--border-size-1) solid;
+  }
+  article div.bio {
+    gap: var(--size-4);
+    display: flex;
+  }
+
+  article div.social {
+    display: flex;
+    gap: var(--size-4);
+    justify-content: end;
+  }
+  article div.social a {
+    color: var(--green-4);
+  }
+  article img {
+    border-radius: 50%;
+    width: var(--size-8);
+    height: var(--size-8);
   }
 </style>

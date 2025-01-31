@@ -2,57 +2,51 @@
 export interface TopNavigationProps {}
 import { Image } from "astro:assets";
 
-const { default: progwisePlanetHtml } = await import(
-  `/src/assets/planet-progwise.svg`
-);
+import PlanetProgwise from "/src/assets/planet-progwise.svg?raw";
 
-const { default: progwiseHeader } = await import(
-  `/src/assets/progwise-header.png`
-);
+import GithubCat from "/src/assets/github-cat.svg?raw";
 ---
 
 <nav>
-  <img id="background" src={progwiseHeader.src} alt="" fetchpriority="high" />
-  <div>
-    <Image src={progwisePlanetHtml} alt="progwise planet" width="60" />
+  <div class="left">
+    <Fragment set:html={PlanetProgwise} />
     <h1>progwise.net</h1>
   </div>
-  <ul>
-    <li>Team</li>
-    <li>Stack</li>
-    <li>Github</li>
-  </ul>
+
+  <div class="right">
+    <Fragment set:html={GithubCat} />
+    <h1>github</h1>
+  </div>
 </nav>
 
 <style>
-  nav > img {
-    position: fixed;
-    object-fit: cover;
-    left: 0;
-    top: 0;
-    z-index: -1;
-  }
   h1 {
+    display: flex;
     font-size: var(--size-6);
   }
+  div.right svg {
+    color: var(--green-2);
+  }
+
   nav {
-    color: var(--gray-2);
+    color: var(--gray-4);
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 1fr;
     padding: var(--size-1) var(--size-4);
     align-items: center;
     overflow: hidden;
   }
-  nav > div {
+  div.left {
     display: flex;
     gap: var(--size-4);
     align-items: center;
     padding: var(--size-2) 0;
   }
-  nav > ul {
+  div.right {
     display: flex;
+    gap: var(--size-4);
+
     justify-content: end;
     align-items: center;
-    list-style-type: none;
   }
 </style>
