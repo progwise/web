@@ -1,0 +1,56 @@
+---
+import GithubCat from "../assets/github-cat.svg?raw";
+
+const { fullName, portraitSrc, bioText, gitHubUsername } = Astro.props;
+---
+
+<article>
+  <h3>{fullName}</h3>
+  <div class="bio">
+    <img src={portraitSrc} alt={fullName} />
+    <p>
+      {bioText}
+    </p>
+  </div>
+  <div class="social">
+    <a href={`https://github.com/${gitHubUsername}`} target="_blank">
+      <Fragment set:html={GithubCat} class:list={["githubcat"]} />
+    </a>
+  </div>
+</article>
+
+<style>
+  article {
+    padding: var(--size-4);
+  }
+
+  article h3 {
+    font-size: var(--size-6);
+    margin-bottom: var(--size-2);
+    border-bottom: var(--gray-4) var(--border-size-1) solid;
+  }
+  article div.bio {
+    gap: var(--size-4);
+    display: flex;
+  }
+
+  article div.social {
+    display: flex;
+    gap: var(--size-4);
+    justify-content: end;
+    height: var(--size-8);
+    border: solid 1px red;
+  }
+  article div.social a {
+    color: var(--gray-2);
+  }
+  article div.social svg {
+    color: var(--gray-2);
+    height: var(--size-4); //does not work!
+  }
+  article img {
+    border-radius: 50%;
+    width: var(--size-8);
+    height: var(--size-8);
+  }
+</style>
