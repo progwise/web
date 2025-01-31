@@ -1,0 +1,7 @@
+@import "open-props/style";
+@import "open-props/normalize";
+@import "open-props/colors-hsl";
+
+:where(html) {
+  --brand-progwise: #1064b0;
+}

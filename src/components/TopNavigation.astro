@@ -1,0 +1,58 @@
+---
+export interface TopNavigationProps {}
+import { Image } from "astro:assets";
+
+const { default: progwisePlanetHtml } = await import(
+  `/src/assets/planet-progwise.svg`
+);
+
+const { default: progwiseHeader } = await import(
+  `/src/assets/progwise-header.png`
+);
+---
+
+<nav>
+  <img id="background" src={progwiseHeader.src} alt="" fetchpriority="high" />
+  <div>
+    <Image src={progwisePlanetHtml} alt="progwise planet" width="60" />
+    <h1>progwise.net</h1>
+  </div>
+  <ul>
+    <li>Team</li>
+    <li>Stack</li>
+    <li>Github</li>
+  </ul>
+</nav>
+
+<style>
+  nav > img {
+    position: fixed;
+    object-fit: cover;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+  h1 {
+    font-size: var(--size-6);
+  }
+  nav {
+    color: var(--gray-2);
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding: var(--size-1) var(--size-4);
+    align-items: center;
+    overflow: hidden;
+  }
+  nav > div {
+    display: flex;
+    gap: var(--size-4);
+    align-items: center;
+    padding: var(--size-2) 0;
+  }
+  nav > ul {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    list-style-type: none;
+  }
+</style>
