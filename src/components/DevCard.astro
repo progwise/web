@@ -75,6 +75,11 @@ const { fullName, portraitSrc, bioText, gitHubUsername } = Astro.props;
     width: var(--size-6);
   }
 
+  article div.social a:hover svg {
+    width: var(--size-6);
+    animation: var(--animation-shake-z);
+  }
+
   article img {
     border-radius: 50%;
     width: var(--size-10);

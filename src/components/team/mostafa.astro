@@ -2,11 +2,13 @@
 import DevCard from "../DevCard.astro";
 
 import mostafa from "../assets/team/mostafa.jpeg";
+
+import { Content as Bio } from "../../assets/team/mostafa.md";
 ---
 
 <DevCard
-  fullName="Mostafa Razavi Ghods"
-  portraitSrc={mostafa.src}
-  bioText="Mostafa is a software engineer who loves to build things with code."
-  gitHubUsername="splendidcomputer"
-/>
+  fullName="Mostafa Razavi"
+
+
+  gitHubUsername="splendidcomputer"> <Bio />
+  </DevCard>
