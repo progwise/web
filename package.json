@@ -11,5 +11,8 @@
   "dependencies": {
     "astro": "^5.1.10",
     "open-props": "^1.7.10"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0"
   }
 }

@@ -1,25 +1,21 @@
 ---
 import astroLogo from "../assets/astro.svg";
-import mostafa from "../assets/team/mostafa.jpeg";
-import yohannes from "../assets/team/yohannes.jpeg";
 
 import DevCard from "./DevCard.astro";
+import Michael from "./team/michael.astro";
+import Pascal from "./team/pascal.astro";
+import Yohannes from "./team/yohannes.astro";
+import Oleksandr from "./team/oleksandr.astro";
 ---
 
 <div class="team">
-  <h2>The Typescript Team</h2>
-  <DevCard
-    fullName="Yohannes Tesfay"
-    portraitSrc={yohannes.src}
-    bioText="Yohannes is a software engineer who loves to build things with code."
-    gitHubUsername="YohannesTesfay"
-  />
-  <DevCard
-    fullName="Mostafa Razavi Ghods"
-    portraitSrc={mostafa.src}
-    bioText="Mostafa is a software engineer who loves to build things with code."
-    gitHubUsername="splendidcomputer"
-  />
+  <h2>The Software Builders</h2>
+  <p>Typescript became our native language.</p>
+
+  <Michael />
+  <Pascal />
+  <Yohannes />
+  <Oleksandr />
 </div>
 
 <style>
@@ -35,5 +31,11 @@ import DevCard from "./DevCard.astro";
   div.team > h2 {
     font-size: 2rem;
     letter-spacing: var(--font-letterspacing-4);
+  }
+
+  div.team > p {
+    font-size: 1.5rem;
+    letter-spacing: var(--font-letterspacing-3);
+    margin-bottom: var(--size-8);
   }
 </style>
