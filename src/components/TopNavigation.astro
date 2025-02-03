@@ -18,7 +18,7 @@ export interface TopNavigationProps {}
   </div>
 
   <div class="right">
-    <a href="https://github.com/progwise">
+    <a href="https://github.com/progwise" target="_blank">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="currentcolor"
@@ -62,6 +62,13 @@ export interface TopNavigationProps {}
 
       justify-content: end;
       align-items: center;
+    }
+
+    a {
+      display: flex;
+      gap: var(--size-2);
+      align-items: center;
+      color: var(--gray-4);
     }
   </style>
 </nav>
