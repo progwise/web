@@ -125,4 +125,20 @@ const { fullName, portraitSrc, gitHubUsername } = Astro.props;
   article div.bio img:hover {
     transform: scale(1.5);
   }
+
+  @media (max-width: 480px) {
+    article header {
+      margin-bottom: 0;
+    }
+    article header h2 {
+      color: transparent;
+      max-width: 0;
+    }
+    article div.bio {
+      font-size: var(--font-size-1);
+    }
+    article div.bio img {
+      width: var(--size-8);
+    }
+  }
 </style>
