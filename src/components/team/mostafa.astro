@@ -1,19 +1,15 @@
 ---
 import DevCard from "../DevCard.astro";
 
-// import mostafa from "../assets/team/mostafa.jpeg";
-
-
+import mostafa from "../../assets/team/mostafa.jpeg";
 
 import { Content as Bio } from "../../assets/team/mostafa.md";
 
-// import { Content as Bio } from
 ---
 
 <DevCard
   fullName="Mostafa Razavi"
-
-
-    gitHubUsername="splendidcomputer">
-    <Bio/>
-  </DevCard>
+  portraitSrc={mostafa.src}
+  gitHubUsername="splendidcomputer">
+  <Bio/>
+</DevCard>
