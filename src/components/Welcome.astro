@@ -78,6 +78,7 @@ import Oleksandr from "./team/oleksandr.astro";
     font-weight: var(--font-weight-8);
     background-color: var(--indigo-2);
     text-decoration: none;
+    align-items: center;
   }
 
   a:hover {
@@ -88,5 +89,22 @@ import Oleksandr from "./team/oleksandr.astro";
   a:hover svg {
     transform: scale(1.5);
     transition: transform 0.2s;
+  }
+
+  @media (max-width: 480px) {
+    div.team > h2 {
+      font-size: var(--font-size-4);
+    }
+    div.team > sub {
+      font-size: var(--font-size-0);
+    }
+
+    a span {
+      font-size: var(--font-size-0);
+    }
+
+    q {
+      font-size: var(--font-size-1);
+    }
   }
 </style>
