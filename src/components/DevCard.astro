@@ -1,4 +1,6 @@
 ---
+import ContactDeveloper from "./ContactDeveloper.astro";
+
 const { fullName, portraitSrc, gitHubUsername } = Astro.props;
 ---
 
@@ -6,7 +8,28 @@ const { fullName, portraitSrc, gitHubUsername } = Astro.props;
   <header>
     <h2>{fullName}</h2>
     <div class="social">
-      <a href={`https://github.com/${gitHubUsername}`} target="_blank">
+      <a
+        class="contact"
+        href={`mailto:developers@progwise.net?subject=Contact%20${fullName}`}
+        target="_blank"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentcolor"
+        >
+          <path
+            d="M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12ZM16 12V13.5C16 14.8807 17.1193 16 18.5 16V16C19.8807 16 21 14.8807 21 13.5V12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21H16"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg><span>E-mail</span></a
+      >
+      <a
+        class="github"
+        href={`https://github.com/${gitHubUsername}`}
+        target="_blank"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="currentcolor"
@@ -44,6 +67,7 @@ const { fullName, portraitSrc, gitHubUsername } = Astro.props;
 
   article header h2 {
     font-size: var(--size-6);
+    font-family: var(--font-humanist);
     letter-spacing: var(--font-letterspacing-3);
   }
   article div.bio {
@@ -55,15 +79,9 @@ const { fullName, portraitSrc, gitHubUsername } = Astro.props;
     font-family: var(--font-humanist);
     font-size: var(--font-size-3);
     font-weight: var(--font-weight-300);
-  }
+    letter-spacing: var(--font-letterspacing-2);
 
-  article div.bio img {
-    border-radius: 10%;
-    width: var(--size-12);
-    height: auto;
-
-    float: left;
-    margin-right: var(--size-2);
+    background: var(--violet-12);
   }
 
   article div.social {
@@ -75,12 +93,13 @@ const { fullName, portraitSrc, gitHubUsername } = Astro.props;
   }
 
   article div.social a {
-    color: var(--gray-2);
+    color: var(--gray-4);
     display: flex;
     gap: var(--size-2);
   }
+
   article div.social a:hover {
-    color: var(--gray-6);
+    color: var(--gray-2);
   }
   article div.social a svg {
     width: var(--size-6);
@@ -88,12 +107,22 @@ const { fullName, portraitSrc, gitHubUsername } = Astro.props;
 
   article div.social a:hover svg {
     width: var(--size-6);
-    animation: var(--animation-shake-z);
+
+    transform: scale(1.2);
+    transition: transform 0.2s;
   }
 
-  article img {
-    border-radius: 50%;
-    width: var(--size-10);
-    height: var(--size-10);
+  article div.bio img {
+    border-radius: 10%;
+    border: var(--border-size-2) solid var(--gray-3);
+    width: var(--size-12);
+    height: auto;
+
+    float: left;
+    margin-right: var(--size-2);
+    transition: transform 0.2s;
+  }
+  article div.bio img:hover {
+    transform: scale(1.5);
   }
 </style>

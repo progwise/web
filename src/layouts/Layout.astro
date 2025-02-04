@@ -1,6 +1,7 @@
 ---
 import TopNavigation from "../components/TopNavigation.astro";
 import background from "../assets/astro-background.webp";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -20,11 +21,13 @@ import background from "../assets/astro-background.webp";
       fetchpriority="high"
     />
 
-    <header class="header">
+    <header>
       <TopNavigation />
     </header>
     <main><slot /></main>
-    <footer></footer>
+    <footer>
+      <Footer />
+    </footer>
   </body>
 </html>
 

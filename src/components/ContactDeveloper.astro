@@ -1,0 +1,109 @@
+---
+const { fullName } = Astro.props;
+---
+
+<script>
+  class ContactDialog extends HTMLElement {
+    connectedCallback() {}
+  }
+  customElements.define("contact-dialog", ContactDialog);
+
+  document.body.addEventListener("click", (event) => {
+    const target = event.target as Element;
+    const dialog = target.closest("dialog") as HTMLDialogElement;
+    if (target === dialog) {
+      dialog.close();
+    }
+    dialog.querySelectorAll("button").forEach((button) => {
+      button.addEventListener("click", (event) => {
+        event.preventDefault();
+        dialog.close();
+      });
+    });
+    dialog.querySelectorAll("input,textarea").forEach((input) => {
+      const element = input as HTMLInputElement;
+      element.addEventListener("blur", (event) => {
+        element.value = element.value.trim();
+        if (element.value.length > 3) {
+          element.style.borderColor = "green";
+        } else {
+          element.style.borderColor = "red";
+        }
+      });
+    });
+  });
+</script>
+
+<contact-dialog data-full-name={fullName}>
+  <dialog>
+    <form method="dialog">
+      <label>
+        <span>Leave a message for</span>
+        <input type="text" value={`${fullName}`} disabled />
+      </label>
+      <label>
+        <textarea
+          rows="3"
+          placeholder="Can you please support me with my typescript problem..."
+        ></textarea>
+      </label>
+      <label>
+        <span></span>
+        <input
+          type="text"
+          placeholder="Enter your email or phone number"
+          name="contact-information"
+        />
+      </label>
+      <button type="submit">Send</button>
+    </form>
+  </dialog>
+</contact-dialog>
+
+<style>
+  dialog {
+    /* display: flex; */
+    opacity: 1;
+    background-color: var(--gray-8);
+    border: var(--border-size-2) solid var(--indigo-10);
+    width: var(--size-content-2);
+    padding: var(--size-4);
+  }
+  form {
+    display: flex;
+    gap: var(--size-4);
+    flex-direction: column;
+    width: 100%;
+  }
+
+  button {
+    margin-top: var(--size-4);
+    padding: var(--size-2) var(--size-4);
+    border-radius: var(--radius-5);
+    color: var(--indigo-10);
+    font-weight: var(--font-weight-8);
+  }
+  label {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  label span {
+    font-style: italic;
+    color: var(--gray-4);
+  }
+
+  input,
+  textArea {
+    padding: var(--size-2);
+    border-radius: var(--radius-2);
+    border: var(--border-size-2) solid var(--indigo-10);
+    color: var(--gray-12);
+    width: 100%;
+  }
+
+  input:disabled {
+    background-color: var(--indigo-2);
+  }
+</style>
