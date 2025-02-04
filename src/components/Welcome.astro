@@ -10,7 +10,17 @@ import Oleksandr from "./team/oleksandr.astro";
 
 <div class="team">
   <h2>Building Your Software</h2>
-  <p>Team with strong focus on Typescript & React & GraphQL</p>
+  <sub>Team with strong focus on Typescript & React & GraphQL</sub>
+  <article>
+    <title>Who we are</title>
+    <p>
+      <q>
+        At progwise.net, we specialize in crafting high-performance software
+        solutions, emphasizing React, TypeScript, and GraphQL. Our seasoned
+        developers and coaches are dedicated to bringing your ideas to life
+      </q>
+    </p>
+  </article>
   <a
     href="mailto:info@progwise.net?subject=Inquiry%204%20Software%20Development%20Services"
     ><span>I need your coding skills now</span>
@@ -47,13 +57,18 @@ import Oleksandr from "./team/oleksandr.astro";
     font-size: 2rem;
     letter-spacing: var(--font-letterspacing-4);
   }
-
-  div.team > p {
-    font-size: 1.5rem;
-    letter-spacing: var(--font-letterspacing-3);
-    margin-bottom: var(--size-8);
+  div.team > sub {
+    font-size: 1rem;
+    letter-spacing: var(--font-letterspacing-2);
   }
 
+  div.team > article {
+    display: grid;
+    place-items: center;
+    padding: var(--size-4);
+    gap: var(--size-4);
+    quotes: "«" "»";
+  }
   a {
     display: flex;
     gap: var(--size-4);
