@@ -43,7 +43,7 @@ export interface TopNavigationProps {}
     }
 
     nav {
-      color: var(--gray-4);
+      color: var(--gray-2);
       display: grid;
       grid-template-columns: 1fr 1fr;
       padding: var(--size-1) var(--size-4);
@@ -68,12 +68,24 @@ export interface TopNavigationProps {}
       display: flex;
       gap: var(--size-2);
       align-items: center;
-      color: var(--gray-4);
+      color: var(--gray-2);
     }
 
-    svg:hover {
-      color: var(--gray-2);
+    div.right svg:hover {
       animation: var(--animation-shake-z);
+    }
+
+    div.left svg {
+      /* animation: spin45 30s linear infinite; */
+    }
+
+    @keyframes spin45 {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
     }
   </style>
 </nav>
