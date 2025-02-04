@@ -1,4 +1,4 @@
-Mostafa Razavi is a **software developer and AI Scientist** with a background in **computer software engineering and artificial intelligence**. He has experience in **full-stack development, system optimization, and AI-driven applications**, with a focus on building **efficient and scalable software solutions**.
+Mostafa Razavi is a **Software Developer and AI Scientist** with a background in **Computer Software Engineering and Artificial Intelligence**. He has experience in **full-stack development, system optimization, and AI-driven applications**, with a focus on building **efficient and scalable software solutions**.
 
 He enjoys working with **Python, JavaScript, TypeScript, and R**, applying them to projects involving **data processing, machine learning, and cloud-based applications**. His work has included **server migration, structured data processing, and performance optimization**.
 
