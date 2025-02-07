@@ -1,12 +1,12 @@
 ---
-import ContactDeveloper from "./ContactDeveloper.astro";
-
 const { fullName, portraitSrc, gitHubUsername } = Astro.props;
 ---
 
 <article>
-  <header>
-    <h2>{fullName}</h2>
+    <div class="bio">
+    <h3>{fullName}</h3>
+    <img src={portraitSrc} alt={fullName} />
+    <slot />
     <div class="social">
       <a
         class="contact"
@@ -43,11 +43,6 @@ const { fullName, portraitSrc, gitHubUsername } = Astro.props;
         <span>{gitHubUsername}</span>
       </a>
     </div>
-  </header>
-
-  <div class="bio">
-    <img src={portraitSrc} alt={fullName} />
-    <slot />
   </div>
 </article>
 <style>
@@ -72,16 +67,14 @@ const { fullName, portraitSrc, gitHubUsername } = Astro.props;
   }
   article div.bio {
     gap: var(--size-4);
+    border-radius: 2%;
     border: var(--border-size-2) solid var(--gray-3);
-    border-radius: var(--radius-drawn-5);
     padding: var(--size-4);
     margin-bottom: var(--size-4);
     font-family: var(--font-humanist);
     font-size: var(--font-size-3);
     font-weight: var(--font-weight-1);
-    letter-spacing: var(--font-letterspacing-3);
-
-    background: var(--violet-12);
+    background: var(--blue-12);
   }
 
   article div.social {
@@ -122,9 +115,9 @@ const { fullName, portraitSrc, gitHubUsername } = Astro.props;
     margin-right: var(--size-2);
     transition: transform 0.2s;
   }
-  article div.bio img:hover {
+  /* article div.bio img:hover {
     transform: scale(1.5);
-  }
+  } */
 
   @media (max-width: 480px) {
     article header {
