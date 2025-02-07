@@ -5,7 +5,7 @@ export interface TopNavigationProps {}
 <nav>
   <div class="left">
     <svg
-      viewBox="0 0 24 25"
+      viewBox="0 0 24 24"
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -14,7 +14,7 @@ export interface TopNavigationProps {}
       ></path>
     </svg>
 
-    <h1>progwise.net</h1>
+    <h4>progwise.net</h4>
   </div>
 
   <div class="right">
@@ -32,14 +32,6 @@ export interface TopNavigationProps {}
   </div>
 
   <style>
-    h1 {
-      font-size: var(--size-6);
-    }
-
-    h2 {
-      font-size: var(--size-4);
-    }
-
     nav {
       color: var(--gray-2);
       display: flex;
@@ -47,6 +39,11 @@ export interface TopNavigationProps {}
       padding: var(--size-1) var(--size-4);
       align-items: center;
       overflow: hidden;
+    }
+    
+    svg {
+      width: 48px;
+      height: 48px;
     }
 
     div {
