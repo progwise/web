@@ -618,7 +618,7 @@ footer > span {
     gap: 45px;
   }
   h1 {
-    font-size: 64px;
+    font-size: clamp(44px, 12vw, 64px);
   }
   .intro {
     font-size: 16px;
