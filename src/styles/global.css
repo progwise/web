@@ -40,6 +40,10 @@ header {
   border-bottom: 1px solid #e8eaed;
 }
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
   color: #24292f;
   font-size: 22px;
   font-weight: 700;
@@ -169,4 +173,10 @@ footer span {
   footer {
     align-items: flex-start;
   }
+}
+
+.brand-signet {
+  display: block;
+  width: 1.3em;
+  height: auto;
 }
