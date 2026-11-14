@@ -1,13 +1,350 @@
 ---
 import "../styles/global.css";
-
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const team = [
+  {
+    role: "Consultant",
+    initial: "C",
+    task: "Understands your business",
+    className: "consultant",
+  },
+  {
+    role: "Designer",
+    initial: "D",
+    task: "Makes ideas tangible",
+    className: "designer",
+  },
+  {
+    role: "Developer",
+    initial: "E",
+    task: "Builds and verifies",
+    className: "developer",
+  },
+  {
+    role: "Progwise expert",
+    initial: "P",
+    task: "Brings human judgment",
+    className: "expert",
+  },
+];
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Meet the next chapter of Progwise. We're building a software company you can step into, with AI teams, human expertise, and a clear view of delivery and costs."
+    />
+    <meta name="theme-color" content="#162d29" />
+    <meta
+      property="og:title"
+      content="Progwise — Your idea. A team to build it."
+    />
+    <meta
+      property="og:description"
+      content="A new way to commission software. Explore our vision for AI teams, human expertise, and a shared virtual office."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.progwise.net/" />
+    <link rel="canonical" href="https://www.progwise.net/" />
+    <link rel="icon" href="/favicon.svg" />
+    <title>Progwise — Your idea. A team to build it.</title>
+  </head>
+  <body>
+    <a class="skip" href="#main">
+      Skip to content
+    </a>
+    <header class="wrap">
+      <a class="brand" href="#" aria-label="Progwise home">
+        progwise<span>✳</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#vision">The idea</a>
+        <a href="#how">How it works</a>
+        <a class="nav-contact" href="#contact">
+          Let’s talk <span aria-hidden="true">↗</span>
+        </a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero wrap" id="vision">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="dot"></span> THE NEXT CHAPTER OF PROGWISE
+          </p>
+          <h1>
+            Your idea.
+            <br />A team to <em>build it.</em>
+          </h1>
+          <p class="intro">
+            Imagine walking into a software company where your AI team is ready
+            to listen, design, and build. With experienced humans there to guide
+            the work.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#office">
+              Step inside the idea <span aria-hidden="true">↗</span>
+            </a>
+            <span>
+              A platform in development.
+              <br />
+              An invitation to shape it.
+            </span>
+          </div>
+        </div>
+        <div
+          class="office"
+          id="office"
+          aria-label="Illustrative concept of a Progwise virtual office"
+        >
+          <div class="office-bar">
+            <span>
+              <span class="dot"></span> Your project office
+            </span>
+            <span class="concept">CONCEPT PREVIEW</span>
+          </div>
+          <div class="floor">
+            <div class="room meeting">
+              <span class="room-label">LET’S TALK ABOUT YOUR IDEA</span>
+              <div class="meeting-table">
+                <span class="seat customer">You</span>
+                <span class="seat ai">AI</span>
+                <span class="table-note">
+                  What would you
+                  <br />
+                  like to build?
+                </span>
+              </div>
+            </div>
+            <div class="room team-room">
+              <span class="room-label">YOUR TEAM</span>
+              <div class="desks">
+                {team.map((member) => (
+                  <div class:list={["desk", member.className]}>
+                    <span class="avatar">{member.initial}</span>
+                    <strong>{member.role}</strong>
+                    <small>
+                      {member.className === "expert" ? "HUMAN" : "AI"}
+                    </small>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div class="hall">
+              <span class="plant">✳</span>
+              <span>
+                Ideas become conversations.
+                <br />
+                Conversations become software.
+              </span>
+              <span class="plant">✳</span>
+            </div>
+          </div>
+          <div class="office-caption">
+            <span>A shared space for people + AI</span>
+            <a href="#how">Explore the workflow ↓</a>
+          </div>
+        </div>
+      </section>
+      <section class="statement">
+        <div class="wrap statement-inner">
+          <p class="eyebrow">SOFTWARE DEVELOPMENT, REIMAGINED</p>
+          <p>
+            The familiarity of a dedicated team.
+            <br />
+            <span>The pace of AI. The judgment of experience.</span>
+          </p>
+        </div>
+      </section>
+      <section class="wrap section" id="how">
+        <div class="section-heading">
+          <p class="eyebrow">FROM FIRST CONVERSATION TO WHAT’S NEXT</p>
+          <h2>
+            A whole team.
+            <br />
+            One shared understanding.
+          </h2>
+          <p>
+            We’re designing Progwise around the complete life of your software,
+            with your goals and decisions connected to the work.
+          </p>
+        </div>
+        <div class="steps">
+          <article>
+            <span class="step-icon" aria-hidden="true">
+              ↗
+            </span>
+            <h3>Bring the problem.</h3>
+            <p>
+              Talk to an AI consultant. Show how you work today. Together, turn
+              a rough idea into requirements, a proposal, and a plan you
+              understand.
+            </p>
+          </article>
+          <article>
+            <span class="step-icon" aria-hidden="true">
+              ⌘
+            </span>
+            <h3>Meet the progress.</h3>
+            <p>
+              Follow the team, try working previews, and answer questions that
+              move the project forward. Invite a human Progwise expert when the
+              work needs direction.
+            </p>
+          </article>
+          <article>
+            <span class="step-icon" aria-hidden="true">
+              ↻
+            </span>
+            <h3>Keep moving.</h3>
+            <p>
+              Build toward launch with reviews and testing. Return to the same
+              project context for maintenance, new ideas, and the next chapter
+              of your software.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="technical wrap" id="design">
+        <div class="technical-copy">
+          <p class="eyebrow">A PRACTICAL FIRST USE CASE</p>
+          <h2>
+            Give designers
+            <br />
+            room to create.
+          </h2>
+          <p>
+            A new website and webshop, connected to an app you already have.
+            Designers describe changes, explore them with AI, and submit a pull
+            request with a working preview.
+          </p>
+          <p>
+            The proposed workflow gives each team a defined scope, with
+            technical review for changes involving authentication, APIs,
+            databases, or deployment.
+          </p>
+          <details>
+            <summary>
+              One repository or several? <span aria-hidden="true">+</span>
+            </summary>
+            <p>
+              Our starting point for this example is a shared frontend
+              repository for the website and webshop, connected to existing
+              backend systems through defined APIs. A tightly coupled
+              application may suit a monorepo. We would assess the existing
+              architecture before choosing.
+            </p>
+            <p>
+              Repository boundaries work alongside scoped credentials, isolated
+              previews, integration checks, and controlled releases. Frontend
+              changes can still affect login and checkout, so those journeys
+              need verification.
+            </p>
+          </details>
+        </div>
+        <div class="change-card">
+          <div class="change-header">
+            <span class="dot"></span> EXAMPLE DESIGN WORKFLOW
+          </div>
+          <div class="request">
+            <span class="request-label">DESIGN REQUEST</span>
+            <p>
+              “Make the shop feel like our app.
+              <br />
+              Simplify the product page.”
+            </p>
+          </div>
+          <ol>
+            <li>
+              <span>01</span>
+              <div>
+                <strong>Explore with AI</strong>
+                <small>Layouts, components, content</small>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <strong>Try the preview</strong>
+                <small>Review the change in context</small>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <strong>Review &amp; verify</strong>
+                <small>Code, integrations, critical journeys</small>
+              </div>
+            </li>
+            <li>
+              <span>04</span>
+              <div>
+                <strong>Release with control</strong>
+                <small>Approved changes, traceable history</small>
+              </div>
+            </li>
+          </ol>
+          <div class="boundary">Backend changes → technical owner</div>
+        </div>
+      </section>
+      <section class="wrap section funding">
+        <div>
+          <p class="eyebrow">A CLEAR VIEW OF THE INVESTMENT</p>
+          <h2>
+            Fund a month.
+            <br />
+            See what moves forward.
+          </h2>
+        </div>
+        <div>
+          <p class="lead">
+            Our planned model is monthly, paid upfront. Agree the budget and
+            priorities. Work begins when payment arrives.
+          </p>
+          <p>
+            The complete project has a forecast for investment and timing. As
+            requirements become clearer, that forecast evolves—with the reasons
+            and options visible to you.
+          </p>
+          <div class="funding-items">
+            <span>Monthly funding</span>
+            <span>Progress &amp; decisions</span>
+            <span>Updated cost forecasts</span>
+            <span>Expected running costs</span>
+          </div>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <div class="wrap contact-inner">
+          <p class="eyebrow">BUILT ON EXPERIENCE. OPEN TO POSSIBILITIES.</p>
+          <h2>
+            What would you
+            <br />
+            build with a team like this?
+          </h2>
+          <p>
+            We’re shaping Progwise from Cyprus. If you have a project, a
+            technical challenge, or a perspective on how this should work, we’d
+            like to hear it.
+          </p>
+          <a
+            class="button light"
+            href="mailto:info@progwise.net?subject=The%20next%20chapter%20of%20Progwise"
+          >
+            Start a conversation <span aria-hidden="true">↗</span>
+          </a>
+          <span class="email">info@progwise.net</span>
+        </div>
+      </section>
+    </main>
+    <footer class="wrap">
+      <a class="brand" href="#">
+        progwise<span>✳</span>
+      </a>
+      <span>© {new Date().getFullYear()} Progwise Ltd · Cyprus</span>
+      <span>Our direction, taking shape.</span>
+    </footer>
+  </body>
+</html>
