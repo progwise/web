@@ -1,31 +1,5 @@
 ---
 import "../styles/global.css";
-const team = [
-  {
-    role: "Consultant",
-    initial: "C",
-    task: "Understands your business",
-    className: "consultant",
-  },
-  {
-    role: "Designer",
-    initial: "D",
-    task: "Makes ideas tangible",
-    className: "designer",
-  },
-  {
-    role: "Developer",
-    initial: "E",
-    task: "Builds and verifies",
-    className: "developer",
-  },
-  {
-    role: "Your expert",
-    initial: "H",
-    task: "Brings human judgment",
-    className: "expert",
-  },
-];
 ---
 
 <!doctype html>
@@ -37,7 +11,7 @@ const team = [
       name="description"
       content="Progwise is building the next-generation platform for developers and their customers to create, maintain, and evolve software with AI agents, engineering guardrails, and human expertise."
     />
-    <meta name="theme-color" content="#162d29" />
+    <meta name="theme-color" content="#ffffff" />
     <meta
       property="og:title"
       content="Progwise — You shape. Agents build. Experts guide."
@@ -58,107 +32,37 @@ const team = [
     </a>
     <header class="wrap">
       <a class="brand" href="#" aria-label="Progwise home">
-        progwise<span>✳</span>
+        progwise
       </a>
       <nav aria-label="Main navigation">
         <a href="#platform">The platform</a>
         <a href="#how">How it works</a>
         <a class="nav-contact" href="#contact">
-          Let’s talk <span aria-hidden="true">↗</span>
+          Let’s talk
         </a>
       </nav>
     </header>
     <main id="main">
       <section class="hero wrap">
         <div class="hero-copy">
-          <p class="eyebrow">
-            <span class="dot"></span> THE NEXT CHAPTER OF BUILDING SOFTWARE
-          </p>
-          <h1>
-            You shape.
-            <br />
-            Agents build.
-            <br />
-            <em>Experts guide.</em>
-          </h1>
+          <p class="eyebrow">The next chapter of building software</p>
+          <h1>You shape. Agents build. Experts guide.</h1>
           <p class="intro">
             A shared platform for developers and their customers to create,
             maintain, and evolve software. AI agents carry the work forward,
             with engineering standards, guided decisions, and human expertise
             built into the process.
           </p>
-          <div class="hero-actions">
-            <a class="button" href="#meetings">
-              Step inside the idea <span aria-hidden="true">↗</span>
-            </a>
-            <span>
-              A platform in development.
-              <br />
-              An invitation to shape it.
-            </span>
-          </div>
-        </div>
-        <div
-          class="office"
-          id="office"
-          aria-label="Illustrative concept of a Progwise virtual office"
-        >
-          <div class="office-bar">
-            <span>
-              <span class="dot"></span> Your project office
-            </span>
-            <span class="concept">CONCEPT PREVIEW</span>
-          </div>
-          <div class="floor">
-            <div class="room meeting">
-              <span class="room-label">LET’S TALK ABOUT YOUR NEXT CHANGE</span>
-              <div class="meeting-table">
-                <span class="seat customer">You</span>
-                <span class="seat ai">AI</span>
-                <span class="table-note">
-                  What would you
-                  <br />
-                  like to build?
-                </span>
-              </div>
-            </div>
-            <div class="room team-room">
-              <span class="room-label">YOUR TEAM</span>
-              <div class="desks">
-                {team.map((member) => (
-                  <div class:list={["desk", member.className]}>
-                    <span class="avatar">{member.initial}</span>
-                    <strong>{member.role}</strong>
-                    <small>
-                      {member.className === "expert" ? "HUMAN" : "AI"}
-                    </small>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div class="hall">
-              <span class="plant">✳</span>
-              <span>
-                Ideas become conversations.
-                <br />
-                Conversations become software.
-              </span>
-              <span class="plant">✳</span>
-            </div>
-          </div>
-          <div class="office-caption">
-            <span>A shared space for people + AI</span>
-            <a href="#how">Explore the workflow ↓</a>
-          </div>
+          <p class="status">
+            A platform in development. An invitation to shape it.
+          </p>
         </div>
       </section>
       <section class="statement">
         <div class="wrap statement-inner">
-          <p class="eyebrow">SOFTWARE DEVELOPMENT, REIMAGINED</p>
           <p>
             Our ambition is a first version in days, followed by years of
             continuous improvement.
-            <br />
             <span>
               Designed for faster delivery and lower costs throughout the
               software lifecycle.
@@ -168,12 +72,7 @@ const team = [
       </section>
       <section class="wrap section" id="platform">
         <div class="section-heading">
-          <p class="eyebrow">PROJECTS, PEOPLE, AND AGENTS IN ONE PLACE</p>
-          <h2>
-            Your delivery process.
-            <br />
-            Your customer’s workspace.
-          </h2>
+          <h2>Your delivery process. Your customer’s workspace.</h2>
           <p>
             Progwise is a SaaS platform in development for independent
             developers, software companies, and the businesses they serve. Set
@@ -183,8 +82,7 @@ const team = [
         </div>
         <div class="audiences">
           <article>
-            <p class="eyebrow">FOR DEVELOPERS &amp; SOFTWARE COMPANIES</p>
-            <h3>Set up how great software gets built.</h3>
+            <h3>For developers and software companies</h3>
             <p>
               Create customer workspaces, connect or create Git repositories,
               and configure agents, permissions, reviews, tests, and deployment
@@ -197,12 +95,11 @@ const team = [
               everyone who joins.
             </p>
             <a href="mailto:info@progwise.net?subject=Progwise%20for%20my%20customer%20projects">
-              Discuss your customer projects ↗
+              Discuss your customer projects
             </a>
           </article>
           <article>
-            <p class="eyebrow">FOR BUSINESS PEOPLE &amp; DESIGNERS</p>
-            <h3>Keep your software in step with your business.</h3>
+            <h3>For business people and designers</h3>
             <p>
               Define what you need, explore suggestions, try previews, and
               approve or decline changes. Your developer establishes the
@@ -216,19 +113,14 @@ const team = [
               needed.
             </p>
             <a href="mailto:info@progwise.net?subject=Evolving%20my%20software%20with%20Progwise">
-              Discuss your software needs ↗
+              Discuss your software needs
             </a>
           </article>
         </div>
       </section>
       <section class="wrap section" id="how">
         <div class="section-heading">
-          <p class="eyebrow">FROM FIRST CONVERSATION TO WHAT’S NEXT</p>
-          <h2>
-            Your business evolves.
-            <br />
-            Your software comes with you.
-          </h2>
+          <h2>Your business evolves. Your software comes with you.</h2>
           <p>
             A project stays with you through discovery, implementation, launch,
             and maintenance. Business users decide what the software should do.
@@ -238,9 +130,6 @@ const team = [
         </div>
         <div class="steps">
           <article>
-            <span class="step-icon" aria-hidden="true">
-              ↗
-            </span>
             <h3>Define what you need.</h3>
             <p>
               Share an idea or describe a problem in your own words. Progwise
@@ -250,9 +139,6 @@ const team = [
             </p>
           </article>
           <article>
-            <span class="step-icon" aria-hidden="true">
-              ⌘
-            </span>
             <h3>The right expertise joins.</h3>
             <p>
               Progwise would recommend and engage AI and human specialists
@@ -262,9 +148,6 @@ const team = [
             </p>
           </article>
           <article>
-            <span class="step-icon" aria-hidden="true">
-              ↻
-            </span>
             <h3>Keep making it yours.</h3>
             <p>
               After launch, type what needs to change. Progwise would use the
@@ -277,12 +160,7 @@ const team = [
       </section>
       <section class="technical wrap" id="design">
         <div class="technical-copy">
-          <p class="eyebrow">FROM THE FIRST VERSION TO THE NEXT CHANGE</p>
-          <h2>
-            Type what you need.
-            <br />
-            Shape what happens next.
-          </h2>
+          <h2>Type what you need. Shape what happens next.</h2>
           <p>
             When your business expands, your AI consultant would use the
             project’s history to ask who needs access, suggest an approach, and
@@ -297,8 +175,7 @@ const team = [
           </p>
           <details>
             <summary>
-              How would existing software and data be protected?{" "}
-              <span aria-hidden="true">+</span>
+              How would existing software and data be protected?
             </summary>
             <p>
               The planned safeguards include limited agent permissions, isolated
@@ -315,61 +192,10 @@ const team = [
             </p>
           </details>
         </div>
-        <div class="change-card">
-          <div class="change-header">
-            <span class="dot"></span> THE PROPOSED WORKFLOW
-          </div>
-          <div class="request">
-            <span class="request-label">YOUR NEXT CHANGE</span>
-            <p>
-              “We’ve opened a second location.
-              <br />
-              Give each manager their own view.”
-            </p>
-          </div>
-          <ol>
-            <li>
-              <span>01</span>
-              <div>
-                <strong>Clarify together</strong>
-                <small>Questions, suggestions, business decisions</small>
-              </div>
-            </li>
-            <li>
-              <span>02</span>
-              <div>
-                <strong>Try the preview</strong>
-                <small>Approve, decline, or refine the result</small>
-              </div>
-            </li>
-            <li>
-              <span>03</span>
-              <div>
-                <strong>Review &amp; verify</strong>
-                <small>Automated checks and specialist review</small>
-              </div>
-            </li>
-            <li>
-              <span>04</span>
-              <div>
-                <strong>Release with control</strong>
-                <small>Protected data, deployment, monitoring</small>
-              </div>
-            </li>
-          </ol>
-          <div class="boundary">
-            From a business request to a reviewed release
-          </div>
-        </div>
       </section>
       <section class="wrap section split">
         <div>
-          <p class="eyebrow">A CLEAR VIEW OF THE INVESTMENT</p>
-          <h2>
-            Fund a month.
-            <br />
-            See what moves forward.
-          </h2>
+          <h2>Fund a month. See what moves forward.</h2>
         </div>
         <div>
           <p class="lead">
@@ -393,22 +219,11 @@ const team = [
             developers and software companies. Platform pricing is still being
             developed.
           </p>
-          <div class="funding-items">
-            <span>Monthly funding</span>
-            <span>Spending &amp; commitments</span>
-            <span>Budget alerts &amp; forecasts</span>
-            <span>Expected running costs</span>
-          </div>
         </div>
       </section>
       <section class="wrap section split meetings" id="meetings">
         <div>
-          <p class="eyebrow">YOUR SHARED VIRTUAL OFFICE</p>
-          <h2>
-            Walk in.
-            <br />
-            Work it through together.
-          </h2>
+          <h2>Walk in. Work it through together.</h2>
         </div>
         <div>
           <p class="lead">
@@ -430,12 +245,7 @@ const team = [
       </section>
       <section class="contact" id="contact">
         <div class="wrap contact-inner">
-          <p class="eyebrow">BUILT ON EXPERIENCE. OPEN TO POSSIBILITIES.</p>
-          <h2>
-            What should your software
-            <br />
-            do next?
-          </h2>
+          <h2>What should your software do next?</h2>
           <p>
             Run a development company? Build software for customers? Shape the
             tools your business uses? We’d like to hear how you work. Help us
@@ -446,18 +256,16 @@ const team = [
             class="button light"
             href="mailto:info@progwise.net?subject=The%20next%20chapter%20of%20building%20software"
           >
-            Start a conversation <span aria-hidden="true">↗</span>
+            info@progwise.net
           </a>
-          <span class="email">info@progwise.net</span>
         </div>
       </section>
     </main>
     <footer class="wrap">
       <a class="brand" href="#">
-        progwise<span>✳</span>
+        progwise
       </a>
       <span>© {new Date().getFullYear()} Progwise Ltd.</span>
-      <span>Our direction, taking shape.</span>
     </footer>
   </body>
 </html>
