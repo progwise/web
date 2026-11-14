@@ -180,3 +180,51 @@ footer span {
   width: 1.3em;
   height: auto;
 }
+
+.lifecycle {
+  margin: 28px 0 12px;
+  padding: 20px 24px;
+  border: 1px solid #e8eaed;
+}
+.lifecycle figcaption {
+  font-weight: 600;
+}
+.lifecycle ol {
+  margin: 16px 0;
+  padding: 0 0 0 18px;
+  border-left: 1px solid #b8c8d7;
+  list-style: none;
+}
+.lifecycle li {
+  position: relative;
+  padding-bottom: 14px;
+  color: #48515a;
+}
+.lifecycle li:last-child {
+  padding-bottom: 0;
+}
+.lifecycle li::before {
+  position: absolute;
+  top: 0.7em;
+  left: -22px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #305c81;
+  content: "";
+}
+.lifecycle strong {
+  color: #24292f;
+}
+.lifecycle-note {
+  display: block;
+  font-size: 14px;
+}
+.lifecycle .lifecycle-archive {
+  margin: 0;
+  padding-top: 14px;
+  border-top: 1px dashed #b8c8d7;
+}
+.lifecycle-terms {
+  font-size: 14px;
+}
